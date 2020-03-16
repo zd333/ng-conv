@@ -221,5 +221,5 @@ Default NGRX, Angular, TypeScript style guides, best practices and conventions/p
 ## Misc
 
 * use import aliases for app and all features
-* use top level (root or feature level) ng-modules as containers only (do not privode, declare only import other modules)
-* use Angular environments only to identify dev/not-dev mode (config must be processed in another way, so that artifact can be used with any env once it is built and there is no need to rebuild the artifact just because of env env is different)
+* use top level (root or feature level) ng-modules as containers only (do not privode/declare, only import other modules)
+* use Angular environments only to identify dev/not-dev mode; config must be processed in another way, so that artifact can be used with any env once it is built and there is no need to rebuild the artifact just because of env is different
