@@ -1,6 +1,17 @@
-# ng-conv
+# Set of conventions/guides/best practices for Angular apps
+
+Default NGRX, Angular, TypeScript style guides, best practices and conventions/patterns are must with corresponding priority unless there is specific convention in this doc.
 
 ## Folder structure
+
+*do not nest component folders (use flat structure with sibling folders), even for sub-components
+*keep folder structure as flat as possible, try to add features as siblings even if they seem to be logically nested (avoid subfeature1->subfeature1_1->subfeature1_1_1 folder nesting)
+*some functionality can/should become a dedicated sub-feature due to one of next 2 reasons only: 1 feature is required to be lazy-loaded (so needs dedicated module), 2 - feature should be logically separated/independent
+*keep everything that describes data structures (all interfaces, types and classes, but not enums) in `types` folders
+*keep enums in `constants` folder
+*place constant into a dedicated file (in `constants` folder) only if it is exported and used in multiple places
+*do not replicate routing structure in project folder structure, they can have different hierarchy; project folder structure should be convenient for developers, routing (paths) structure should be convenient for end-user
+*do not use a dedicated folder for shared services, just provide them in `feature-shared.module.ts` (via providedIn)
 
 ```bash
 ├── app-component.ts
@@ -148,3 +159,50 @@
             ├── entity-y-state.interface.ts
             └── entity-z-state.interface.ts
 ```
+
+## Types
+
+*avoid classes (except library ones), always prefer interfaces/types
+*avoid ubiquitous direct usage of types from external libs (including API DTOs/DAOs), only use those types in the code units that directly work with the lib (e.g. API connector service can directly use DTO interface from API lib), for other cases create own type/type wrapper (even if it is a trivial 1-to-1 type alias)
+*prefer TS type unions over enums; use enums only when there is a strong reason (values are meaningless - e.g. API error codes, etc.)
+
+## Naming
+
+*avoid types with name that contain `model` (due to the model can refer to OOP - data+logic inside which is not ok for REDUX)
+
+## State
+
+*avoid meta-reducers
+*keep state structure as flat as possible (avoid nested data structures)
+*normalize data in the store
+*prefer NGRX entities
+*avoid parametrized NGRX selectors, especially selector factories
+*never subscribe in facades (if you need that - then there are good chances that something goes non-NGRX way)
+*facades should be stateless
+*store (facades) is always injected into containers, guards, interceptors and rarely injected into other services (if you do so - then there are good chances that something goes non-NGRX way, must be a strong reason for the case)
+
+## Components
+
+*always separate container (smart) and presentational (dumb) components; never inject Store and other state-full services into dumb components; if you need some data from store almost everywhere (e.g. logged in user permissions) - then implement a custom directive with injected store, directive MUST use async pipe or run markForCheck (to trigger change detection up)
+* never use styles/UI markup in container components
+*do not use component input that accept RX streams (only plain data)
+*`OnPush` change detection for dumb components is a must.
+*shared components should be really shared (generic, used across the whole app/feature), declare such components in dedicated single-component-modules for shared components
+
+## Routing
+
+*keep routing as flat as possible, avoid nested router outlets unless there is a strong reason for it
+*prefer relative router links over absolute router links
+*avoid resolvers (due to type-unsafety)
+
+## Services
+
+*all services except connectors (API connectors, storage data access objects, etc.) should be stateless
+*state-full services and services with side-effects (except store/facades) can only be injected into effects, never inject such services into components, facades and into other services (if you do so - then there are good chances that something goes non-NGRX way)
+*avoid plain functions (helpers), prefer stateless/side-effecft-less services which are injected via DI
+
+## Misc
+
+*use import aliases for app and all features
+*use top level (root or feature level) ng-modules as containers only (do not privode, declare only import other modules)
+*use Angular environments only to identify dev/not-dev mode (config must be processed in another way, so that artifact can be used with any env once it is built and there is no need to rebuild the artifact just because of env env is different)
