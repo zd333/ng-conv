@@ -1,22 +1,22 @@
-# Set of conventions/guides/best practices for NGRX Angular apps
+# :kiss: Set of conventions/guides/best practices for NGRX Angular apps
 
 Default NGRX, Angular, TypeScript style guides, best practices and conventions/patterns are must with corresponding priority unless there is specific convention in this doc.
 
-[Folder structure](#folder-structure)
+[:underage: Folder structure](#folder-structure)
 
-[Types](#types)
+[:skull: Types](#types)
 
-[Naming](#naming)
+[:trollface: Naming](#naming)
 
-[State](#state)
+[:heart: State](#state)
 
-[Components](#components)
+[:see_no_evil: Components](#components)
 
-[Services](#services)
+[:shit: Services](#services)
 
-[Routing](#routing)
+[:feelsgood: Routing](#routing)
 
-[Misc](#misc)
+[:circus_tent: Misc](#misc)
 
 ## Folder structure
 
