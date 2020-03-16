@@ -203,13 +203,13 @@ Default NGRX, Angular, TypeScript style guides, best practices and conventions/p
 * always separate container (smart) and presentational (dumb) components; never inject Store and other state-full services into dumb components; if you need some data from store almost everywhere (e.g. logged in user permissions) - then implement a custom directive with injected store, directive MUST use async pipe or run markForCheck (to trigger change detection upwards)
 * never use styles/UI markup in container components
 * do not use component input that accept RX streams (plain data only!)
-* `OnPush` change detection for dumb components is a must.
+* `OnPush` change detection for dumb components is a must
 * shared components should be really shared (generic, used across the whole app/feature), declare such components in dedicated single-component-modules
 
 ## Services
 
-* all services except connectors (API connectors, storage data access objects, etc.) should be stateless
-* state-full services and services with side-effects (except store/facades) can only be injected into effects, never inject such services into components, facades and into other services (if you do so - then there are good chances that something goes non-NGRX way)
+* services must be stateless; connectors (API connectors, storage data access objects, etc.) can have state-full dependencies, but own code of such services must be stateless any way
+* state-full services (with state-full dependencies) and services with side-effects (except store/facades) can only be injected into effects, never inject such services into components, facades and into other services (if you do so - then there are good chances that something goes non-NGRX way)
 * avoid plain functions (helpers), prefer stateless/side-effecft-less services which are injected via DI
 
 ## Routing
