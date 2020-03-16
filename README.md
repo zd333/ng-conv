@@ -74,6 +74,7 @@ Default NGRX, Angular, TypeScript style guides, best practices and conventions/p
 │   └── └── some-container.component.ts
 ├── constants
 │   ├── index.ts
+│   ├── app-routing-param-names.enum.ts
 │   ├── auth-initial-state.constant.ts
 │   ├── error-codes.enum.ts
 │   ├── root-initial-state.constant.ts
@@ -124,6 +125,7 @@ Default NGRX, Angular, TypeScript style guides, best practices and conventions/p
     │   │       └── another-container.component.ts
     │   ├── constants
     │   │   ├── index.ts
+    │   │   ├── some-feature1-routing-param-names.ts    
     │   │   └── entity-x-initial-state.constant.ts
     │   ├── guards
     │   │   ├── index.ts
@@ -137,7 +139,6 @@ Default NGRX, Angular, TypeScript style guides, best practices and conventions/p
     └── some-feature2
         ├── some-feature2.module.ts    
         ├── some-feature2-core.module.ts
-        ├── some-feature2-routing.module.ts
         ├── +state
         │   ├── some-feature2-state.module.ts        
         │   ├── selectors
