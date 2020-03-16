@@ -2,6 +2,15 @@
 
 Default NGRX, Angular, TypeScript style guides, best practices and conventions/patterns are must with corresponding priority unless there is specific convention in this doc.
 
+[Folder structure](##folder-structure)
+[Types](##types)
+[Naming](##naming)
+[State](##state)
+[Components](##components)
+[Services](##services)
+[Routing](##routing)
+[Misc](##misc)
+
 ## Folder structure
 
 * keep folder structure as flat as possible, try to add features as siblings even if they seem to be logically nested (avoid subfeature1->subfeature1_1->subfeature1_1_1 folder nesting)
@@ -189,17 +198,17 @@ Default NGRX, Angular, TypeScript style guides, best practices and conventions/p
 * `OnPush` change detection for dumb components is a must.
 * shared components should be really shared (generic, used across the whole app/feature), declare such components in dedicated single-component-modules
 
-## Routing
-
-* keep routing as flat as possible, avoid nested router outlets unless there is a strong reason to use it
-* avoid resolvers (due to type-unsafety)
-* prefer relative router links over absolute router links
-
 ## Services
 
 * all services except connectors (API connectors, storage data access objects, etc.) should be stateless
 * state-full services and services with side-effects (except store/facades) can only be injected into effects, never inject such services into components, facades and into other services (if you do so - then there are good chances that something goes non-NGRX way)
 * avoid plain functions (helpers), prefer stateless/side-effecft-less services which are injected via DI
+
+## Routing
+
+* keep routing as flat as possible, avoid nested router outlets unless there is a strong reason to use it
+* avoid resolvers (due to type-unsafety)
+* prefer relative router links over absolute router links
 
 ## Misc
 
