@@ -199,7 +199,7 @@ Default NGRX, Angular, TypeScript style guides, best practices and conventions/p
 
 ## Components
 
-* always separate container (smart) and presentational (dumb) components; never inject Store and other state-full services into dumb components; if you need some data from store almost everywhere (e.g. logged in user permissions) - then implement a custom directive with injected store, directive MUST use async pipe or run markForCheck (to trigger change detection up)
+* always separate container (smart) and presentational (dumb) components; never inject Store and other state-full services into dumb components; if you need some data from store almost everywhere (e.g. logged in user permissions) - then implement a custom directive with injected store, directive MUST use async pipe or run markForCheck (to trigger change detection upwards)
 * never use styles/UI markup in container components
 * do not use component input that accept RX streams (plain data only!)
 * `OnPush` change detection for dumb components is a must.
