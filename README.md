@@ -2,14 +2,21 @@
 
 Default NGRX, Angular, TypeScript style guides, best practices and conventions/patterns are must with corresponding priority unless there is specific convention in this doc.
 
-[Folder structure](##folder-structure)
-[Types](##types)
-[Naming](##naming)
-[State](##state)
-[Components](##components)
-[Services](##services)
-[Routing](##routing)
-[Misc](##misc)
+[Folder structure](#folder-structure)
+
+[Types](#types)
+
+[Naming](#naming)
+
+[State](#state)
+
+[Components](#components)
+
+[Services](#services)
+
+[Routing](#routing)
+
+[Misc](#misc)
 
 ## Folder structure
 
