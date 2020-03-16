@@ -27,7 +27,7 @@ Default NGRX, Angular, TypeScript style guides, best practices and conventions/p
 * do not use a dedicated folder for shared services, just provide them in `feature-shared.module.ts` (via providedIn)
 * keep everything that describes data structures (all interfaces, types and classes, but not enums) in `types` folders
 * keep enums in `constants` folder
-* place constant into a dedicated file (in `constants` folder) only if it is exported and used in multiple places
+* place types (interfaces, classes), constants, enumns into a dedicated file (in `types`/`constants` folder) only if it is exported and used in multiple files/places
 
 ```bash
 ├── app-component.ts
