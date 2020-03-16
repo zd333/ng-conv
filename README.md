@@ -4,14 +4,14 @@ Default NGRX, Angular, TypeScript style guides, best practices and conventions/p
 
 ## Folder structure
 
-*do not nest component folders (use flat structure with sibling folders), even for sub-components
-*keep folder structure as flat as possible, try to add features as siblings even if they seem to be logically nested (avoid subfeature1->subfeature1_1->subfeature1_1_1 folder nesting)
-*some functionality can/should become a dedicated sub-feature due to one of next 2 reasons only: 1 feature is required to be lazy-loaded (so needs dedicated module), 2 - feature should be logically separated/independent
-*keep everything that describes data structures (all interfaces, types and classes, but not enums) in `types` folders
-*keep enums in `constants` folder
-*place constant into a dedicated file (in `constants` folder) only if it is exported and used in multiple places
-*do not replicate routing structure in project folder structure, they can have different hierarchy; project folder structure should be convenient for developers, routing (paths) structure should be convenient for end-user
-*do not use a dedicated folder for shared services, just provide them in `feature-shared.module.ts` (via providedIn)
+* do not nest component folders (use flat structure with sibling folders), even for sub-components
+* keep folder structure as flat as possible, try to add features as siblings even if they seem to be logically nested (avoid subfeature1->subfeature1_1->subfeature1_1_1 folder nesting)
+* some functionality can/should become a dedicated sub-feature due to one of next 2 reasons only: 1 feature is required to be lazy-loaded (so needs dedicated module), 2 - feature should be logically separated/independent
+* keep everything that describes data structures (all interfaces, types and classes, but not enums) in `types` folders
+* keep enums in `constants` folder
+* place constant into a dedicated file (in `constants` folder) only if it is exported and used in multiple places
+* do not replicate routing structure in project folder structure, they can have different hierarchy; project folder structure should be convenient for developers, routing (paths) structure should be convenient for end-user
+* do not use a dedicated folder for shared services, just provide them in `feature-shared.module.ts` (via providedIn)
 
 ```bash
 ├── app-component.ts
