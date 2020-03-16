@@ -74,10 +74,10 @@ Default NGRX, Angular, TypeScript style guides, best practices and conventions/p
 │   └── └── some-container.component.ts
 ├── constants
 │   ├── index.ts
-│   ├── app-routing-param-names.enum.ts
 │   ├── auth-initial-state.constant.ts
-│   ├── error-codes.enum.ts
 │   ├── root-initial-state.constant.ts
+│   ├── app-routing-param-names.enum.ts
+│   ├── error-codes.enum.ts
 │   └── some-shared-constant.constant.ts
 ├── guards
 │   ├── index.ts
