@@ -41,7 +41,7 @@ Default NGRX, Angular, TypeScript style guides, best practices and conventions/p
 │   ├── selectors
 │   │   ├── index.ts
 │   │   ├── some-auth.selector.ts
-│   │   ├── another-auth.selector.ts.ts
+│   │   ├── another-auth.selector.ts
 │   │   ├── some-root.selector.ts
 │   │   ├── another-root.selector.ts
 │   │   └── some-compound.selector.ts
