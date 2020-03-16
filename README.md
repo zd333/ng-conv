@@ -213,7 +213,7 @@ Default NGRX, Angular, TypeScript style guides, best practices and conventions/p
 
 ## Routing
 
-* keep routing as flat as possible, avoid nested router outlets unless there is a strong reason to use it
+* keep routing as flat as possible, avoid encreasing router outlets nesting level unless there is a real reason for nesting
 * avoid resolvers (due to type-unsafety)
 * prefer relative router links over absolute router links
 
