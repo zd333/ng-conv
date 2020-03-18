@@ -1,6 +1,6 @@
 # :kiss: Set of conventions/guides/best practices for NGRX Angular apps
 
-Default NGRX, Angular, TypeScript style guides, best practices and conventions/patterns are must with corresponding priority unless there is specific convention in this doc.
+**Default NGRX, Angular, TypeScript style guides, best practices and conventions/patterns are must (with corresponding priority) unless there is specific convention in this doc.**
 
 [:sob: Folder structure](#folder-structure)
 
