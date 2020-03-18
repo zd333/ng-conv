@@ -2,19 +2,19 @@
 
 Default NGRX, Angular, TypeScript style guides, best practices and conventions/patterns are must with corresponding priority unless there is specific convention in this doc.
 
-[:underage: Folder structure](#folder-structure)
+[:sob: Folder structure](#folder-structure)
 
 [:skull: Types](#types)
 
 [:trollface: Naming](#naming)
 
-[:heart: State](#state)
+[:sos: State](#state)
 
 [:see_no_evil: Components](#components)
 
-[:shit: Services](#services)
+[:underage: Services](#services)
 
-[:feelsgood: Routing](#routing)
+[:rainbow: Routing](#routing)
 
 [:circus_tent: Misc](#misc)
 
