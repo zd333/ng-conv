@@ -76,7 +76,7 @@
 │   ├── index.ts
 │   ├── auth-initial-state.constant.ts
 │   ├── root-initial-state.constant.ts
-│   ├── app-routing-param-names.enum.ts
+│   ├── app-routing-param-names.constant.ts
 │   ├── error-codes.enum.ts
 │   └── some-shared-constant.constant.ts
 ├── guards
@@ -125,7 +125,7 @@
     │   │       └── another-container.component.ts
     │   ├── constants
     │   │   ├── index.ts
-    │   │   ├── some-feature1-routing-param-names.ts    
+    │   │   ├── some-feature1-routing-param-names.constant.ts    
     │   │   └── entity-x-initial-state.constant.ts
     │   ├── guards
     │   │   ├── index.ts
