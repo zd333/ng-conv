@@ -44,6 +44,9 @@
 │   │   ├── another-auth.selector.ts
 │   │   ├── some-root.selector.ts
 │   │   ├── another-root.selector.ts
+│   │   ├── route-url.selector.ts
+│   │   ├── route-param.selector.ts
+│   │   ├── route-query-param.selector.ts
 │   │   └── some-compound.selector.ts
 │   └── slices
 │       ├── auth
@@ -52,6 +55,9 @@
 │       │   ├── auth.effects.ts
 │       │   ├── auth.reducer.ts
 │       │   └── auth-state.facade.ts
+│       ├── router
+│       │   ├── index.ts
+│       │   └── router-state.facade.ts
 │       └── root
 │           ├── index.ts
 │           ├── root.actions.ts
