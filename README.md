@@ -37,7 +37,7 @@
 ├── app-shared.module.ts
 ├── +state
 │   ├── app-state.module.ts
-│   ├── router-serializer.ts
+│   ├── route-serializer.ts
 │   ├── selectors
 │   │   ├── index.ts
 │   │   ├── some-auth.selector.ts
