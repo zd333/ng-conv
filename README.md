@@ -191,6 +191,7 @@
 
 ## Naming
 
+* names should be completely self-explanatory without need to know context (e.g. file name should explain everything, without need to know folder name where file is allocated)
 * avoid types with name that contains `model` (due to the model can refer to OOP - data+logic inside which is not ok for REDUX)
 
 ## State
