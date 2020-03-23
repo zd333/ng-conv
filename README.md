@@ -185,6 +185,7 @@
 
 ## Types
 
+* avoid `null` values
 * avoid classes (except library ones), always prefer interfaces/types
 * avoid ubiquitous direct usage of types from external libs (including API DTOs/DAOs), only use those types in the code units that directly work with the lib (e.g. API connector service can directly use DTO interface from API lib), for other cases create own type/type wrapper (even if it is a trivial 1-to-1 type alias)
 * prefer TS type unions over enums; use enums only when name usage is really better than direct value usage (e.g. when values are meaningless - e.g. API error codes, etc.)
