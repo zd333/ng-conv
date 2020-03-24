@@ -205,6 +205,7 @@
 * facades should be stateless
 * never subscribe in facades (if you need that - then there are good chances that something goes non-NGRX way)
 * store (facades) is always injected into containers, guards, interceptors and rarely injected into other services (if you do so - then there are good chances that something goes non-NGRX way, must be a strong reason for the case)
+* keep every single selector in dedicated file, reexport selectors via query object in index file
 
 ## Components
 
