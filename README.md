@@ -49,17 +49,14 @@
 │   │   └── some-compound.selector.ts
 │   └── slices
 │       ├── auth
-│       │   ├── index.ts
 │       │   ├── auth.actions.ts
 │       │   ├── auth.effects.ts
 │       │   ├── auth.reducer.ts
 │       │   └── auth-state.facade.ts
 │       ├── router
-│       │   ├── index.ts
 │       │   ├── route-serializer.ts
 │       │   └── router-state.facade.ts
 │       └── root
-│           ├── index.ts
 │           ├── root.actions.ts
 │           ├── root.effects.ts
 │           ├── root.reducer.ts
@@ -109,7 +106,6 @@
     │   ├── some-feature1-routing.module.ts
     │   ├── some-feature1-shared.module.ts
     │   ├── +state
-    │   │   ├── index.ts    
     │   │   ├── some-feature1-state.module.ts
     │   │   ├── entity-x.actions.ts
     │   │   ├── entity-x.effects.ts
@@ -153,13 +149,11 @@
         │   │   └── some-entity-z.selector.ts
         │   └── slices
         │       ├── entity-y
-        │       │   ├── index.ts
         │       │   ├── entity-y.actions.ts        
         │       │   ├── entity-y.effects.ts
         │       │   ├── entity-y.reducer.ts
         │       │   └── entity-y-state.facade.ts
-        │       └── entity-z
-        │           ├── indexs.ts        
+        │       └── entity-z     
         │           ├── entity-z.actions.ts
         │           ├── entity-z.effects.ts
         │           ├── entity-z.reducer.ts
