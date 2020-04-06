@@ -211,6 +211,7 @@
 
 ## Services
 
+* in most cases services (regualr and guards) should be provided in feature core module, feature core module should not have any imports
 * services must be stateless; connectors (API connectors, storage data access objects, etc.) can have state-full dependencies, but own code of such services must be stateless any way
 * state-full services (with state-full dependencies) and services with side-effects (except store/facades) can only be injected into effects, never inject such services into components, facades and into other services (if you do so - then there are good chances that something goes non-NGRX way)
 * services must be provided on the level (module) where they are used, avoid providing everything on app root level
