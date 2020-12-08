@@ -21,7 +21,6 @@
 ## Folder structure
 
 * keep folder structure as flat as possible, try to add domains (features) as siblings even if they seem to be logically nested (avoid domain1->sub_domain1_1->sub_domain1_1_1 folder nesting)
-* some functionality can/should become a dedicated sub-domain due to one of next 2 reasons only: 1 - feature is required to be lazy-loaded (so needs dedicated module), 2 - feature should be logically separated/independent
 * do not replicate routing structure in project folder structure, they can have different hierarchy; project folder structure should be convenient for developers, routing (paths) structure should be convenient for end-user
 * do not nest component folders (use flat structure with sibling folders), even for sub-components
 * do not use a dedicated folder for shared services, just provide them in `feature-shared.module.ts` (via providedIn)
@@ -203,17 +202,18 @@
 
 ## Components
 
-* in most cases a component should be declared in feature core module
+* prefer single component modules
+* best place to declare component (import component module) is feature root module
 * always separate container (smart) and presentational (dumb) components; never inject Store and other state-full services into dumb components; if you need some data from store almost everywhere (e.g. logged in user permissions) - then implement a custom directive with injected store, directive MUST use async pipe or run markForCheck (to trigger change detection upwards)
 * never use styles/UI markup in container components
 * do not use component input that accept RX streams (plain data only!)
 * `OnPush` change detection for dumb components is a must
-* shared components should be really shared (generic, used across the whole app/feature), declare such components in dedicated single-component-modules
+* avoid shared components module, prefer importing everything you need explicitely
 
 ## Services
 
 * in most cases a service (regualr or guard) should be provided in feature core module
-* services must be stateless; connectors (API connectors, storage data access objects, etc.) can have state-full dependencies, but own code of such services must be stateless any way
+* most services must be stateless; connectors (API connectors, storage data access objects, etc.) can have state-full dependencies, but own code of such services must be stateless any way
 * state-full services (with state-full dependencies) and services with side-effects (except store/facades) can only be injected into effects, never inject such services into components, facades and into other services (if you do so - then there are good chances that something goes non-NGRX way)
 * services must be provided on the level (module) where they are used, avoid providing everything on app root level
 * avoid plain functions (helpers), prefer stateless/side-effecft-less services which are injected via DI
@@ -228,5 +228,4 @@
 
 * TS strict mode and Angular full + strict template type checking is a must
 * use import aliases for app and all features (remember more nested feature aliases should go first in tsconfig alias list because IDE intellisense uses first matching alias)
-* use top level (root or feature level) ng-modules as containers only (do not privode/declare, only import other modules)
 * use Angular environments only to identify dev/not-dev mode; config must be processed in another way, so that artifact can be used with any env once it is built and there is no need to rebuild the artifact just because of env is different
